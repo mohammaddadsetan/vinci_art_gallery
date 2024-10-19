@@ -6,14 +6,16 @@ import Linkedbutton from "../Linkedbutton";
 import "./Header.css"
 import BasicGrid from "../Grid";
 import Grid from '@mui/material/Grid2';
+import BoxBasic from "../Box";
+import { Height } from "@mui/icons-material";
 export default function Header() {
   return (
     <header>
       <BasicGrid gridGap={0} gridGrow={1}>
-        <Grid size={4}>
-          <div className='header-logo'><a href="./"><img className='WH100' src={logo} alt="" /></a></div>
+        <Grid size={4} sx={{alignContent:"center"}}>
+         <BoxBasic custom={{width:"15em" , height:"100%"}}><a href="./"><img className='WH100' src={logo} alt="" /></a></BoxBasic>
         </Grid>
-        <Grid size={4}>
+        <Grid size={4} sx={{alignContent:"center"}}>
           <div className='header-options'>
             <BasicMenu value={"products"}>
               <MenuItem >Profile</MenuItem>
@@ -31,7 +33,7 @@ export default function Header() {
             </BasicMenu>
           </div>
         </Grid>
-        <Grid size={4}>
+        <Grid size={4} sx={{ alignContent:"center"}}>
           <div className='header-login'>
             {/* <Secondarybutton background={'transparent'} width={'8em'} height={''}><a href="./">LOGIN</a></Secondarybutton> */}
             <Linkedbutton variant={"text"} sx={{ color: "white", backgroundColor: "transparent" }}>LOGIN</Linkedbutton>

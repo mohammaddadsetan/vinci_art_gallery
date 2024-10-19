@@ -2,7 +2,7 @@ header{
     width: 100%;
     box-sizing: border-box;
     display:flex;
-    height:5em;
+    /* height:5em; */
     position: fixed;
     background-color:rgba(0, 0, 0, 0.34);
     padding:1em 2em;
@@ -42,3 +42,8 @@ header{
   
   a.arrow-btn{color: white;}
   
+
+  img.WH100{
+    width: 100%;
+  height: 100%;
+object-fit: contain;}
