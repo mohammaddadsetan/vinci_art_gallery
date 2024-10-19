@@ -1,0 +1,44 @@
+header{
+    width: 100%;
+    box-sizing: border-box;
+    display:flex;
+    height:5em;
+    position: fixed;
+    background-color:rgba(0, 0, 0, 0.34);
+    padding:1em 2em;
+    z-index: 10;
+  }
+  
+  .header-login,
+  .header-options,
+  .header-logo {
+    flex: 1;
+    display: flex;
+    
+  }
+  
+  .header-options{
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .header-login {
+    justify-content: end;
+  
+  }
+  
+  .flex-row{
+    display: flex;
+    justify-content: center;
+  align-items: center;
+  }
+   
+  a.arrow-btn img{
+    width: 1.4em;
+    height: .8em;
+    padding: 0 0 0 0.5em ;
+  }
+  
+  
+  a.arrow-btn{color: white;}
+  

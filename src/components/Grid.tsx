@@ -4,8 +4,8 @@ import Grid from '@mui/material/Grid2';
 
 type gridbox={
     gridGrow:any,
-    children:any,
     gridGap:number,
+    children:any
 
     }
 
