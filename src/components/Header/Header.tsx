@@ -8,13 +8,14 @@ import BasicGrid from "../Grid";
 import Grid from '@mui/material/Grid2';
 import BoxBasic from "../Box";
 import DirectionStack from "../Flexcontainer";
+import SimpleContainer from "../Container";
 export default function Header() {
   return (
-    <header>
-      <BoxBasic custom={{ width: "100%", height: "100%" ,  }}>
+   <SimpleContainer>
+      <BoxBasic custom={{ width: "100%", height: "fit-content" ,boxSizing:" border-box", backgroundColor:"rgba(0, 0, 0, 0.34)" , padding:".5em 2em" ,position:" fixed"}}>
         <BasicGrid gridGap={0}>
           <Grid size={4} sx={{ alignContent: "center" }}>
-            <BoxBasic custom={{ width: "15em", height: "100%" }}><a href="./"><img className='WH100' src={logo} alt="" /></a></BoxBasic>
+            <BoxBasic custom={{ width: "12em", height: "100%" }}><a href="./"><img className='WH100' src={logo} alt="" /></a></BoxBasic>
           </Grid>
           <Grid size={4} sx={{ alignContent: "center" }}>
             <DirectionStack direct={"row"} gapspace={0} sx={{ justifyContent: "space-around" }}>
@@ -35,7 +36,7 @@ export default function Header() {
             </DirectionStack>
           </Grid>
           <Grid size={4} sx={{ alignContent: "center" }}>
-            <DirectionStack direct={"row"} gapspace={5} sx={{ justifyContent: "flex-end" }}>
+            <DirectionStack direct={"row"} gapspace={3} sx={{ justifyContent: "flex-end" }}>
               <Linkedbutton variant={"text"} sx={{ color: "white", backgroundColor: "transparent" }}>LOGIN</Linkedbutton>
               <Linkedbutton variant={"contained"} sx={{ color: "black", backgroundColor: "white" }}>SHOP</Linkedbutton>
             </DirectionStack>
@@ -46,7 +47,7 @@ export default function Header() {
       </BoxBasic>
 
 
-    </header>
+      </SimpleContainer>
 
 
   )

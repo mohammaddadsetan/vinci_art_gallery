@@ -1,10 +1,10 @@
 
 import Container from '@mui/material/Container';
 
-export default function SimpleContainer({maxWidth , children}:any) {
+export default function SimpleContainer({ children}:any) {
   return (
    
-      <Container fixed maxWidth={maxWidth} disableGutters>
+      <Container disableGutters maxWidth={false}>
         {children}
       </Container>
     
