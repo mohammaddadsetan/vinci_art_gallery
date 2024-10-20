@@ -3,16 +3,16 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid2';
 
 type gridbox={
-    gridGrow:any,
+  
     gridGap:number,
     children:any
 
     }
 
 
-export default function BasicGrid({gridGrow , gridGap , children,}:gridbox) {
+export default function BasicGrid({ gridGap , children,}:gridbox) {
   return (
-    <Box sx={{ flexGrow: gridGrow}}>
+    
       <Grid container spacing={gridGap}>
 
 
@@ -21,6 +21,6 @@ export default function BasicGrid({gridGrow , gridGap , children,}:gridbox) {
 
 
        </Grid>
-    </Box>
+    
   );
 }

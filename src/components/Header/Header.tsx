@@ -11,38 +11,39 @@ import DirectionStack from "../Flexcontainer";
 export default function Header() {
   return (
     <header>
-      <BasicGrid gridGap={0} gridGrow={1}>
-        <Grid size={4} sx={{alignContent:"center"}}>
-         <BoxBasic custom={{width:"15em" , height:"100%"}}><a href="./"><img className='WH100' src={logo} alt="" /></a></BoxBasic>
-        </Grid>
-        <Grid size={4} sx={{alignContent:"center"}}>
-          <DirectionStack direct={"row"} gapspace={0} sx={{justifyContent: "space-around"}}>
-            <BasicMenu value={"products"}>
-              <MenuItem >Profile</MenuItem>
-              <MenuItem >My account</MenuItem>
-              <MenuItem>Logout</MenuItem>
-            </BasicMenu>
-            <Linkedbutton variant={"text"} sx={{ color: "white" }}>LOGIN</Linkedbutton>
-            <BasicMenu value={"resorces"}>
-              <MenuItem >Profile</MenuItem>
-              <MenuItem >My account</MenuItem>
-              <MenuItem>Logout</MenuItem>
-              <MenuItem>Logout</MenuItem>
-              <MenuItem>Logout</MenuItem>
-              <MenuItem>Logout</MenuItem>
-            </BasicMenu>
+      <BoxBasic custom={{ width: "100%", height: "100%" ,  }}>
+        <BasicGrid gridGap={0}>
+          <Grid size={4} sx={{ alignContent: "center" }}>
+            <BoxBasic custom={{ width: "15em", height: "100%" }}><a href="./"><img className='WH100' src={logo} alt="" /></a></BoxBasic>
+          </Grid>
+          <Grid size={4} sx={{ alignContent: "center" }}>
+            <DirectionStack direct={"row"} gapspace={0} sx={{ justifyContent: "space-around" }}>
+              <BasicMenu value={"products"}>
+                <MenuItem >Profile</MenuItem>
+                <MenuItem >My account</MenuItem>
+                <MenuItem>Logout</MenuItem>
+              </BasicMenu>
+              <Linkedbutton variant={"text"} sx={{ color: "white" }}>LOGIN</Linkedbutton>
+              <BasicMenu value={"resorces"}>
+                <MenuItem >Profile</MenuItem>
+                <MenuItem >My account</MenuItem>
+                <MenuItem>Logout</MenuItem>
+                <MenuItem>Logout</MenuItem>
+                <MenuItem>Logout</MenuItem>
+                <MenuItem>Logout</MenuItem>
+              </BasicMenu>
             </DirectionStack>
-        </Grid>
-        <Grid size={4} sx={{ alignContent:"center"}}>
-         <DirectionStack direct={"row"} gapspace={5} sx={{justifyContent: "flex-end"}}>
-            <Linkedbutton variant={"text"} sx={{ color: "white", backgroundColor: "transparent" }}>LOGIN</Linkedbutton>
-            <Linkedbutton variant={"contained"} sx={{ color: "black", backgroundColor: "white" }}>SHOP</Linkedbutton>
+          </Grid>
+          <Grid size={4} sx={{ alignContent: "center" }}>
+            <DirectionStack direct={"row"} gapspace={5} sx={{ justifyContent: "flex-end" }}>
+              <Linkedbutton variant={"text"} sx={{ color: "white", backgroundColor: "transparent" }}>LOGIN</Linkedbutton>
+              <Linkedbutton variant={"contained"} sx={{ color: "black", backgroundColor: "white" }}>SHOP</Linkedbutton>
             </DirectionStack>
-        </Grid>
+          </Grid>
 
 
-      </BasicGrid>
-
+        </BasicGrid>
+      </BoxBasic>
 
 
     </header>
