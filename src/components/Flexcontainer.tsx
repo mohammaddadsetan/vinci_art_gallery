@@ -17,12 +17,13 @@ const Item = styled(Paper)(({ theme }) => ({
 type Flexcontainer={
     direct:any,
     children:any,
-    gapspace:number
+    gapspace:number,
+    sx:any
     }
 
-export default function DirectionStack({children, gapspace, direct}:Flexcontainer) {
+export default function DirectionStack({children, gapspace, direct , sx}:Flexcontainer) {
   return (
-      <Stack direction={direct} spacing={gapspace}>
+      <Stack direction={direct} spacing={gapspace} sx={sx}>
        {children}
        </Stack>
   );

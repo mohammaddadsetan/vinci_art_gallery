@@ -7,7 +7,7 @@ import "./Header.css"
 import BasicGrid from "../Grid";
 import Grid from '@mui/material/Grid2';
 import BoxBasic from "../Box";
-import { Height } from "@mui/icons-material";
+import DirectionStack from "../Flexcontainer";
 export default function Header() {
   return (
     <header>
@@ -16,7 +16,7 @@ export default function Header() {
          <BoxBasic custom={{width:"15em" , height:"100%"}}><a href="./"><img className='WH100' src={logo} alt="" /></a></BoxBasic>
         </Grid>
         <Grid size={4} sx={{alignContent:"center"}}>
-          <div className='header-options'>
+          <DirectionStack direct={"row"} gapspace={0} sx={{justifyContent: "space-around"}}>
             <BasicMenu value={"products"}>
               <MenuItem >Profile</MenuItem>
               <MenuItem >My account</MenuItem>
@@ -31,14 +31,13 @@ export default function Header() {
               <MenuItem>Logout</MenuItem>
               <MenuItem>Logout</MenuItem>
             </BasicMenu>
-          </div>
+            </DirectionStack>
         </Grid>
         <Grid size={4} sx={{ alignContent:"center"}}>
-          <div className='header-login'>
-            {/* <Secondarybutton background={'transparent'} width={'8em'} height={''}><a href="./">LOGIN</a></Secondarybutton> */}
+         <DirectionStack direct={"row"} gapspace={5} sx={{justifyContent: "flex-end"}}>
             <Linkedbutton variant={"text"} sx={{ color: "white", backgroundColor: "transparent" }}>LOGIN</Linkedbutton>
             <Linkedbutton variant={"contained"} sx={{ color: "black", backgroundColor: "white" }}>SHOP</Linkedbutton>
-          </div>
+            </DirectionStack>
         </Grid>
 
 
