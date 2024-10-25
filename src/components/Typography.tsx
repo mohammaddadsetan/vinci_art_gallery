@@ -1,11 +1,11 @@
-type typo={
-    children:any ,
-    variant:any ,
-     typ:any , 
-     custom:any
+// type typo={
+//     children:any,
+//     variant:string,
+//     custom:any,
+//    typ:any
 
 
-}
+// }
 
 
 
