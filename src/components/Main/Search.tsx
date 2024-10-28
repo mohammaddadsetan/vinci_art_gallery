@@ -5,6 +5,8 @@ import Grid from "@mui/system/Grid"
 import Typtext from "../Typography"
 import Inputbox from "../Inputbox"
 import SearchIcon from '@mui/icons-material/Search';
+import DirectionStack from "../Flexcontainer"
+import Linkedbutton from "../Linkedbutton"
 export default function Search() {
     return (
         <SimpleContainer typ={"section"} custom={{ padding: "4em 2em", backgroundColor: 'rgb(237,237,237)' }}>
@@ -18,7 +20,13 @@ export default function Search() {
                     </Grid>
                     <Grid size={6}>
                         <BoxBasic>
-                            <Inputbox typ={"search"} variant={"outlined"} icon={<SearchIcon/>} placeholder={"search your product"} />
+                            <DirectionStack sx={""} gapspace={5} direct={"column"}> 
+                                <DirectionStack gapspace={3} sx={""} direct={"row"}>
+                                    <Inputbox custom={{ backgroundColor: "white", }} color={"black"} id={"outlined-search"} typ={"search"} variant={"outlined"} icon={<SearchIcon />} placeholder={"search your product"} />
+                                    <Linkedbutton variant={"contained"} sx={{ color: "white", backgroundColor: "black", width: "10em" }}>LOGIN</Linkedbutton>
+                                </DirectionStack>
+                                
+                            </DirectionStack>
                         </BoxBasic>
                     </Grid>
 
