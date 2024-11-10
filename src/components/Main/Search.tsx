@@ -12,7 +12,7 @@ export default function Search() {
     return (
         <SimpleContainer typ={"section"} custom={{ padding: "5em 2em", backgroundColor: 'rgb(237,237,237)' }}>
             <BoxBasic custom={{ width: "100%" }}>
-                <BasicGrid gridGap={0}>
+                <BasicGrid gridGap={6}>
 
                     <Grid size={6}>
                         <BoxBasic custom={{ maxWidth: "70%" }}>
