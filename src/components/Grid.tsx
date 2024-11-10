@@ -5,14 +5,14 @@ type gridbox = {
 
   gridGap: number,
   children: any
-
+custom?:any
 }
 
 
-export default function BasicGrid({ gridGap, children, }: gridbox) {
+export default function BasicGrid({ gridGap, children,custom }: gridbox) {
   return (
 
-    <Grid container spacing={gridGap}>
+    <Grid container spacing={gridGap} sx={custom}>
 
 
 
