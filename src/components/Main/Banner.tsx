@@ -5,6 +5,7 @@ import SimpleContainer from '../Container'
 import Typtext from '../Typography'
 import DirectionStack from '../Flexcontainer'
 import Linkedbutton from '../Linkedbutton'
+import SimpleSnackbar from './DarkLightButton'
 
 export default function Banner() {
     return (
@@ -18,15 +19,17 @@ export default function Banner() {
                 padding: "0 0 0 7em"
 
             }} >
-                <DirectionStack gapspace={5} direct={"column"} sx={{ zIndex: "2", maxWidth: "30em", userSelect:"none" }}>
-                    <Typtext variant={"h2"} typ={"h2"} custom={{ color: "white", fontSize: "4.5em", lineHeight: "90%" , fontWeight:"400" }}>A website makes it real</Typtext>
+                <DirectionStack gapspace={5} direct={"column"} sx={{ zIndex: "2", maxWidth: "30em", userSelect: "none" }}>
+                    <Typtext variant={"h2"} typ={"h2"} custom={{ color: "white", fontSize: "4.5em", lineHeight: "90%", fontWeight: "400" }}>A website makes it real</Typtext>
                     <DirectionStack gapspace={3} direct={"row"} sx={{ alignItems: "center" }} >
                         <Linkedbutton variant={"contained"} sx={{ color: "black", backgroundColor: "white", minWidth: "9em", height: "4.5em" }}>SHOP</Linkedbutton>
                         <Typtext variant={"h6"} typ={"p"} custom={{ color: "rgb(232,228,228)" }}>Get your free website trial today.No credit card required</Typtext>
 
                     </DirectionStack>
                 </DirectionStack>
+                
             </SimpleContainer>
+            <SimpleSnackbar/>
         </BoxBasic>
     )
 
