@@ -12,7 +12,7 @@ import SimpleContainer from "../Container";
 export default function Header() {
   return (
     <header>
-   <SimpleContainer typ={"section"}>
+   <SimpleContainer typ={"nav"}>
       <BoxBasic custom={{ width: "100%", height: "fit-content" ,boxSizing:" border-box", backgroundColor:"rgba(0, 0, 0, 0.34)" , padding:".5em 2em" ,position:" fixed" , zIndex:"10"}}>
         <BasicGrid gridGap={0}>
           <Grid size={4} sx={{ alignContent: "center" }}>

@@ -1,9 +1,8 @@
 .MuiBox-root img.banner-img{
     object-fit: cover;
-    position:absolute;
+    /* position:absolute; */
     top: 0;
     z-index: -100;
     user-select: none;
-    filter: brightness(90%);
-
+    filter: brightness(90%)
 }
