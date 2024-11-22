@@ -6,15 +6,16 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
-
-export default function MultiActionAreaCard() {
+import micheal from '../../img/michelangelodavid4.png';
+import { IconButton } from '@mui/material';
+import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';export default function MultiActionAreaCard() {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="140"
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image={micheal}
           alt="green iguana"
         />
         <CardContent>
@@ -28,9 +29,9 @@ export default function MultiActionAreaCard() {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
+      <IconButton color='warning'>
+          <StarBorderOutlinedIcon/>
+        </IconButton>
       </CardActions>
     </Card>
   );

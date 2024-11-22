@@ -4,6 +4,10 @@ import BasicGrid from "../Grid"
 import { Grid2 } from "@mui/material"
 import Typtext from "../Typography"
 import MultiActionAreaCard from "./cards"
+import Inputbox from "../Inputbox"
+import SearchIcon from '@mui/icons-material/Search';
+import InteractiveList from "./listfilter"
+
 export default function Products() {
     return (
         <BoxBasic typ={"section"} custom={{ padding: "0 2em" }}>
@@ -16,9 +20,18 @@ export default function Products() {
             <DirectionStack gapspace={0} direct={"row"} sx={{ justifyContent: "space-between" }}><Typtext>29 result</Typtext>
 
             </DirectionStack>
-            <BasicGrid gridGap={0}>
-                <Grid2 size={4}></Grid2>
-                <Grid2 size={8}>
+            <BasicGrid gridGap={4}>
+                <Grid2 size={3} sx={{ position: "sticky",overflow:"scroll" , border: "2px solid black", padding:"1em" }}>
+
+                    <Inputbox placeholder={"Search..."} typ={"search"} color={"black"} icon={<SearchIcon/>}/>
+<InteractiveList/>
+
+
+
+
+
+                </Grid2>
+                <Grid2 size={9}>
                     <BasicGrid gridGap={3}>
                         <Grid2 size={4} rowGap={7} container>
                             <MultiActionAreaCard />
