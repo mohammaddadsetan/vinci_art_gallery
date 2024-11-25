@@ -1,14 +1,38 @@
 import React from 'react';
-import Header from './components/Header/Header'
+
 import Main from './components/Main/Main';
-import Products from './components/Products/products';
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Layouts from './layouts';
+import RouteOne from './components/Products';
+import Header from './components/Header/Header';
 function App() {
-  return (
-    <>
-    <Header position='none'/>
-    <Products/>
-    </>
-  );
+  const router = createBrowserRouter(
+
+    [
+      {
+        path: '/',
+        element: <Layouts/>,
+        children: [
+          {
+            index: true,
+            element: <Main />
+          },
+          RouteOne
+        ]
+
+
+
+
+      }
+    ]
+  )
+return(
+<RouterProvider router={router}/>
+)
+
+
+
+
 }
 
 export default App;
