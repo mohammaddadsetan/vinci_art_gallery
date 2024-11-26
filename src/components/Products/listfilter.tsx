@@ -5,6 +5,9 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
 import RangeSlider from './priceSlider';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import { Link } from 'react-router-dom';
 
 export default function InteractiveList() {
     const [dense, setDense] = React.useState(false);
@@ -13,8 +16,8 @@ export default function InteractiveList() {
         <List dense={dense}>
 
             <ListItem
-            disablePadding
-            
+                disablePadding
+
                 secondaryAction={
                     <Checkbox
                         edge="end"
@@ -23,18 +26,18 @@ export default function InteractiveList() {
                 }
             >
                 <ListItemButton
-                disableGutters
+                    disableGutters
                 >
 
                     <ListItemText
-                    
+
                         primary="Musics"
 
                     />
                 </ListItemButton>
             </ListItem>
             <ListItem
-            disablePadding
+                disablePadding
                 secondaryAction={
                     <Checkbox
                         edge="end"
@@ -50,7 +53,7 @@ export default function InteractiveList() {
                 </ListItemButton>
             </ListItem>
             <ListItem
-            disablePadding
+                disablePadding
                 secondaryAction={
                     <Checkbox
                         edge="end"
@@ -61,14 +64,14 @@ export default function InteractiveList() {
                 <ListItemButton disableGutters>
                     <ListItemText
                         primary="Sculptures"
-                        
+
 
                     />
                 </ListItemButton>
             </ListItem>
             <ListItem
-            disablePadding
-            divider
+                disablePadding
+                divider
                 secondaryAction={
                     <Checkbox
                         edge="end"
@@ -83,6 +86,24 @@ export default function InteractiveList() {
                     />
                 </ListItemButton>
             </ListItem>
+            <RangeSlider />
+            <ButtonGroup
+                orientation="vertical"
+                aria-label="Vertical button group"
+                variant="text"
+                fullWidth
+                color='inherit'
+                size='large'
+            >
+                <Link to={"/products/musics"}><Button  key="Musics">Musics</Button></Link>,
+                <Button key="Paints">Paints</Button>,
+                <Button key="Sculptures">Sculptures</Button>,
+                <Button key="Photos">Photos</Button>,
+                <Button key="Crafts">Crafts</Button>,
+            
+            </ButtonGroup>
+
         </List>
+
     )
 }

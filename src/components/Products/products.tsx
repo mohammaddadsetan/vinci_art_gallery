@@ -27,7 +27,7 @@ export default function Products() {
 
                     <Inputbox placeholder={"Search..."} typ={"search"} color={"black"} icon={<SearchIcon />} />
                     <InteractiveList />
-                    <RangeSlider />
+                    
 
 
 
