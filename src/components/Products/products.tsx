@@ -23,7 +23,7 @@ export default function Products() {
                 <ColorToggleButton />
             </DirectionStack>
             <BasicGrid gridGap={4}>
-                <Grid2 size={3} sx={{ position: "sticky", overflow: "scroll", border: "2px solid black", padding: "1em" }}>
+                <Grid2 size={3} sx={{ position: "sticky",top:"0", overflow: "scroll", padding: "1em" , height:"30em", borderTop:"1px solid black" , borderBottom:"1px solid black"}}>
 
                     <Inputbox placeholder={"Search..."} typ={"search"} color={"black"} icon={<SearchIcon />} />
                     <InteractiveList />
