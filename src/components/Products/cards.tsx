@@ -28,8 +28,10 @@ import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';expo
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions>
-      <IconButton color='warning'>
+      <CardActions sx={{justifyContent:"space-between"}}>
+      
+        <Button sx={{backgroundColor:"black" , color:"white"}} variant='contained'>Shop</Button>
+        <IconButton color='warning'>
           <StarBorderOutlinedIcon/>
         </IconButton>
       </CardActions>
