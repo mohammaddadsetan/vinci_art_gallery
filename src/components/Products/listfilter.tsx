@@ -95,7 +95,7 @@ export default function InteractiveList() {
                 color='inherit'
                 size='large'
             >
-                <Button href='./products/paints/vanGogh' key="Musics">Musics</Button>,
+                <Button href='./products/musics' key="Musics">Musics</Button>,
                 <Button key="Paints">Paints</Button>,
                 <Button key="Sculptures">Sculptures</Button>,
                 <Button key="Photos">Photos</Button>,
