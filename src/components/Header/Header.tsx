@@ -25,7 +25,7 @@ export default function Header({ position }: pos) {
         <BoxBasic custom={{ width: "100%", height: "fit-content", boxSizing: " border-box", backgroundColor: "rgba(0, 0, 0, 0.34)", padding: ".5em 2em", position: { position }, zIndex: "10" }}>
           <BasicGrid gridGap={0}>
             <Grid size={4} sx={{ alignContent: "center" }}>
-              <BoxBasic custom={{ width: "12em", height: "100%" }}><a href="./"><img className='WH100' src={logo} alt="" /></a></BoxBasic>
+              <BoxBasic custom={{ width: "12em", height: "100%" }}><Link to={"/"}><img className='WH100' src={logo} alt="" /></Link></BoxBasic>
             </Grid>
             <Grid size={4} sx={{ alignContent: "center" }}>
               <DirectionStack direct={"row"} gapspace={0} sx={{ justifyContent: "space-around" }}>
