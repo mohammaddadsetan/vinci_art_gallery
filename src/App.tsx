@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layouts from './layouts';
 import RouteOne from './components/Products';
 import Header from './components/Header/Header';
+import RouteTwo from './components/product';
 function App() {
   const router = createBrowserRouter(
 
@@ -17,7 +18,8 @@ function App() {
             index: true,
             element: <Main />
           },
-          RouteOne
+          RouteOne,
+          RouteTwo
         ]
 
 

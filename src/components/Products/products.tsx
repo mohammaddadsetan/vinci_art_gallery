@@ -9,6 +9,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import InteractiveList from "./listfilter"
 import ColorToggleButton from "./sortFIlter"
 import RangeSlider from "./priceSlider"
+import { Link } from "react-router-dom"
 export default function Products() {
     return (
         <BoxBasic typ={"section"} custom={{ padding: "0 2em" }}>
@@ -36,7 +37,7 @@ export default function Products() {
                 <Grid2 size={9}>
                     <BasicGrid gridGap={3}>
                         <Grid2 size={4} rowGap={7} container>
-                            <MultiActionAreaCard />
+                           <Link to={"/products/paints/vanGogh"}> <MultiActionAreaCard /></Link>
                             <MultiActionAreaCard />
                             <MultiActionAreaCard />
                             <MultiActionAreaCard />
