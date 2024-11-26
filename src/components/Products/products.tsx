@@ -8,6 +8,7 @@ import Inputbox from "../Inputbox"
 import SearchIcon from '@mui/icons-material/Search';
 import InteractiveList from "./listfilter"
 import ColorToggleButton from "./sortFIlter"
+import RangeSlider from "./priceSlider"
 export default function Products() {
     return (
         <BoxBasic typ={"section"} custom={{ padding: "0 2em" }}>
@@ -17,7 +18,7 @@ export default function Products() {
                     <Grid2 size={6} sx={{ alignItems: "center", display: "flex" }}><BoxBasic><Typtext variant={"body1"} custom={{ maxWidth: "90%", }}>Whether you need a portfolio website, an online store, or a personal blog, you can use Squarespace's customizable and responsive website templates to get started.</Typtext></BoxBasic></Grid2>
                 </BasicGrid>
             </BoxBasic>
-            <DirectionStack gapspace={0} direct={"row"} sx={{alignItems:"center" , justifyContent:"space-between"  , marginBottom:"1em"}}>
+            <DirectionStack gapspace={0} direct={"row"} sx={{ alignItems: "center", justifyContent: "space-between", marginBottom: "1em" }}>
                 <Typtext>29 result</Typtext>
                 <ColorToggleButton />
             </DirectionStack>
@@ -26,7 +27,7 @@ export default function Products() {
 
                     <Inputbox placeholder={"Search..."} typ={"search"} color={"black"} icon={<SearchIcon />} />
                     <InteractiveList />
-
+                    <RangeSlider />
 
 
 

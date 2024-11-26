@@ -4,6 +4,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Checkbox from '@mui/material/Checkbox';
+import RangeSlider from './priceSlider';
 
 export default function InteractiveList() {
     const [dense, setDense] = React.useState(false);
@@ -17,7 +18,7 @@ export default function InteractiveList() {
                 secondaryAction={
                     <Checkbox
                         edge="end"
-                        color='default'
+                        color='warning'
                     />
                 }
             >
@@ -37,7 +38,7 @@ export default function InteractiveList() {
                 secondaryAction={
                     <Checkbox
                         edge="end"
-                        color='default'
+                        color='warning'
                     />
                 }
             >
@@ -53,13 +54,14 @@ export default function InteractiveList() {
                 secondaryAction={
                     <Checkbox
                         edge="end"
-                        color='default'
+                        color='warning'
                     />
                 }
             >
                 <ListItemButton disableGutters>
                     <ListItemText
                         primary="Sculptures"
+                        
 
                     />
                 </ListItemButton>
@@ -70,7 +72,7 @@ export default function InteractiveList() {
                 secondaryAction={
                     <Checkbox
                         edge="end"
-                        color='default'
+                        color='warning'
                     />
                 }
             >
