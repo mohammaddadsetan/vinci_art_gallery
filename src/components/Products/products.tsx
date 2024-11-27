@@ -23,43 +23,43 @@ export default function Products() {
                 <Typtext>29 result</Typtext>
                 <ColorToggleButton />
             </DirectionStack>
-            <BasicGrid gridGap={4}>
-                <Grid2 size={3} sx={{ position: "sticky",top:"0", overflow: "scroll", padding: "1em" , height:"30em", borderTop:"1px solid black" , borderBottom:"1px solid black"}}>
+            <BasicGrid gridGap={0}>
+                <Grid2 size={2.5} sx={{ position: "sticky", top: "0", overflow: "scroll", padding: "1em", height: "30em", borderTop: "1px solid black"}}>
 
                     <Inputbox placeholder={"Search..."} typ={"search"} color={"black"} icon={<SearchIcon />} />
                     <InteractiveList />
-                    
+
 
 
 
 
                 </Grid2>
-                <Grid2 size={9}>
-                    <BasicGrid gridGap={3}>
-                        <Grid2 size={4} rowGap={7} container>
-                           <Link to={"/products/paints/vanGogh"}> <MultiActionAreaCard /></Link>
-                            <MultiActionAreaCard />
-                            <MultiActionAreaCard />
-                            <MultiActionAreaCard />
+                <Grid2 size={9.5} gap={4} container wrap="wrap" sx={{justifyContent:"end"}}>
 
 
-                        </Grid2>
-                        <Grid2 size={4} rowGap={7} container>
-                            <MultiActionAreaCard />
-                            <MultiActionAreaCard />
-                            <MultiActionAreaCard />
-                            <MultiActionAreaCard />
+                    <Link to={"/products/paints/vanGogh"}> <MultiActionAreaCard /></Link>
+                    <MultiActionAreaCard />
+                    <MultiActionAreaCard />
+                    <MultiActionAreaCard />
 
-                        </Grid2>
-                        <Grid2 size={4} rowGap={7} container>
-                            <MultiActionAreaCard />
-                            <MultiActionAreaCard />
-                            <MultiActionAreaCard />
-                            <MultiActionAreaCard />
 
-                        </Grid2>
 
-                    </BasicGrid>
+
+                    <MultiActionAreaCard />
+                    <MultiActionAreaCard />
+                    <MultiActionAreaCard />
+                    <MultiActionAreaCard />
+
+
+
+                    <MultiActionAreaCard />
+                    <MultiActionAreaCard />
+                    <MultiActionAreaCard />
+                    <MultiActionAreaCard />
+
+
+
+
                 </Grid2>
 
 

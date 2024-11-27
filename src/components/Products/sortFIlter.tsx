@@ -22,7 +22,7 @@ export default function ColorToggleButton() {
       onChange={handleAlignment}
       aria-label="Platform"
       fullWidth
-      sx={{width:"74.3%" , border:"solid black 1px"}}
+      sx={{width:"60%" , border:"solid black 1px"}}
 
     >
       <ToggleButton value="Newest">Newest</ToggleButton>

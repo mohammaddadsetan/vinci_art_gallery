@@ -10,11 +10,12 @@ import micheal from '../../img/michelangelodavid4.png';
 import { IconButton } from '@mui/material';
 import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';export default function MultiActionAreaCard() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card sx={{ maxWidth:280}}>
       <CardActionArea>
         <CardMedia
+        
           component="img"
-          height="140"
+          height="170"
           image={micheal}
           alt="green iguana"
         />
@@ -29,7 +30,6 @@ import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';expo
         </CardContent>
       </CardActionArea>
       <CardActions sx={{justifyContent:"space-between"}}>
-      
         <Button sx={{backgroundColor:"black" , color:"white"}} variant='contained'>Shop</Button>
         <IconButton color='warning'>
           <StarBorderOutlinedIcon/>
