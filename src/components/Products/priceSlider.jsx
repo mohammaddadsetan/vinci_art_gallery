@@ -33,7 +33,7 @@ export default function App() {
 
   return (
     <>
-      <Stack direction="column" spacing={3} justifyContent="space-between" alignItems={"center"} sx={{padding:" 1em 0 2em 0"}} >
+      <Stack direction="column" spacing={3} justifyContent="space-between" alignItems={"center"} sx={{padding:" 2em 0 3em 0"}} >
         <Slider
         
           getAriaLabel={() => "Price range"}
@@ -78,7 +78,7 @@ export default function App() {
           />
         </Stack>
       </Stack>
-      <Divider/>
+    
     </>
   );
 }

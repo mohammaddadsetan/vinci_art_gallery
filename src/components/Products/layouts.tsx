@@ -5,8 +5,7 @@ import BoxBasic from "../Box"
 import BasicGrid from "../Grid"
 import { Grid2 } from "@mui/material"
 import Typtext from "../Typography"
-import Inputbox from "../Inputbox"
-import SearchIcon from '@mui/icons-material/Search';
+
 import InteractiveList from "./listfilter"
 import ColorToggleButton from "./sortFIlter"
 export default function Layouts(){
@@ -25,9 +24,9 @@ return(
                 <ColorToggleButton />
             </DirectionStack>
             <BasicGrid gridGap={0}>
-                <Grid2 size={2.5} sx={{ position: "sticky", top: "0", overflow: "scroll", padding: "1em", height: "30em", borderTop: "1px solid black"}}>
+                <Grid2 size={2.5} sx={{ position: "sticky", top: "0", overflow: "scroll", padding: "1em", height: "30em"}}>
 
-                    <Inputbox placeholder={"Search..."} typ={"search"} color={"black"} icon={<SearchIcon />} />
+                    
                     <InteractiveList />
 
 

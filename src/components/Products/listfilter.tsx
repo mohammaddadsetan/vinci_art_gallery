@@ -7,15 +7,34 @@ import Checkbox from '@mui/material/Checkbox';
 import RangeSlider from './priceSlider';
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
-import { Link } from 'react-router-dom';
-import { Divider } from '@mui/material';
 
+import { Divider } from '@mui/material';
+import Inputbox from "../Inputbox"
+import SearchIcon from '@mui/icons-material/Search';
 export default function InteractiveList() {
     const [dense, setDense] = React.useState(false);
     const [secondary, setSecondary] = React.useState(false);
     return (
         <List dense={dense}>
+            <Inputbox placeholder={"Search..."} typ={"search"} color={"black"} icon={<SearchIcon />} />
+            <ButtonGroup
+            sx={{padding:" 2em 0 0em 0"}}
+                orientation="vertical"
+                aria-label="Vertical button group"
+                variant="text"
+                fullWidth
+                color='inherit'
+                size='large'
+            >
+                <Button href='./products/musics' key="Musics">Musics</Button>,
+                <Button key="Paints">Paints</Button>,
+                <Button key="Sculptures">Sculptures</Button>,
+                <Button key="Photos">Photos</Button>,
+                <Button key="Crafts">Crafts</Button>,
+                
+            </ButtonGroup>
 
+            <RangeSlider />
             <ListItem
                 disablePadding
 
@@ -72,7 +91,7 @@ export default function InteractiveList() {
             </ListItem>
             <ListItem
                 disablePadding
-                divider
+                
                 secondaryAction={
                     <Checkbox
                         edge="end"
@@ -86,24 +105,8 @@ export default function InteractiveList() {
 
                     />
                 </ListItemButton>
-            
+
             </ListItem>
-            <RangeSlider />
-            <ButtonGroup
-                orientation="vertical"
-                aria-label="Vertical button group"
-                variant="text"
-                fullWidth
-                color='inherit'
-                size='large'
-            >
-                <Button href='./products/musics' key="Musics">Musics</Button>,
-                <Button key="Paints">Paints</Button>,
-                <Button key="Sculptures">Sculptures</Button>,
-                <Button key="Photos">Photos</Button>,
-                <Button key="Crafts">Crafts</Button>,
-            <Divider/>
-            </ButtonGroup>
 
         </List>
 
