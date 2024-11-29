@@ -2,10 +2,7 @@ import { Grid2, Paper } from "@mui/material"
 import BasicGrid from "../Grid"
 import BoxBasic from "../Box"
 import DirectionStack from "../Flexcontainer"
-
-
-
-
+import ProductSlider from "./productSlider"
 import * as React from 'react';
 import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
@@ -65,12 +62,12 @@ export default function Product() {
     <>
       <BasicGrid gridGap={0}>
         <Grid2 size={8} bgcolor={"hsl(0,0%,96%)"} sx={{ padding: "1em" }}>
-          <BoxBasic custom={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "2em" }}>
+          <BoxBasic custom={{ display: "flex", flexDirection: "column", alignItems: "center"}}>
             <DirectionStack gapspace={0} direct={"row"} sx={{ justifyContent: "space-between", alignItems: "center", width: "100%" }}>
               <Linkedbutton variant={"text"} sx={{ color: "rgb(77,77,79)" }} startIcon={<ArrowBackIosNewIcon />}>back</Linkedbutton>
               {IconBreadcrumbs()}
             </DirectionStack>
-            <DirectionStack gapspace={3} sx={{width:"37em"}} direct={"column"}>
+            {/* <DirectionStack gapspace={3} sx={{width:"37em"}} direct={"column"}>
               <Paperr shadow={24} custom={{ height: "25em", borderRadius: "4px", overflow: "hidden" }}>
                 <img className="WH100" src={michel} alt="" />
               </Paperr>
@@ -80,7 +77,11 @@ export default function Product() {
                 <Paperr shadow={24}custom={{borderRadius: "4px", overflow: "hidden"}}><img className="WH100" src={michel4} alt="" /></Paperr>
                 <Paperr shadow={24}custom={{borderRadius: "4px", overflow: "hidden"}}><img className="WH100" src={michel4} alt="" /></Paperr>
               </DirectionStack>
-            </DirectionStack>
+            </DirectionStack> */}
+
+            
+              <ProductSlider />
+            
           </BoxBasic>
         </Grid2>
         <Grid2 size={4}>
