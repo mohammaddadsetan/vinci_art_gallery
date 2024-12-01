@@ -8,33 +8,49 @@ import CardActionArea from '@mui/material/CardActionArea';
 import CardActions from '@mui/material/CardActions';
 import micheal from '../../img/michelangelodavid4.png';
 import { IconButton } from '@mui/material';
-import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';export default function MultiActionAreaCard() {
+import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
+import { Product } from '../../api';
+
+
+type productsprop = {
+  products: Product[];
+}
+
+
+export default function MultiActionAreaCard({ products }: productsprop) {
   return (
-    <Card sx={{ maxWidth:280}}>
-      <CardActionArea>
-        <CardMedia
+
+    <>
+      {products.map((Product, id) => (
         
-          component="img"
-          height="170"
-          image={micheal}
-          alt="green iguana"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
-            Lizard
-          </Typography>
-          <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-            Lizards are a widespread group of squamate reptiles, with over 6,000
-            species, ranging across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions sx={{justifyContent:"space-between"}}>
-        <Button sx={{backgroundColor:"black" , color:"white"}} variant='contained'>Shop</Button>
-        <IconButton color='warning'>
-          <StarBorderOutlinedIcon/>
-        </IconButton>
-      </CardActions>
-    </Card>
+        <Card sx={{ width:270 }} key={id}>
+          <CardActionArea>
+            <CardMedia
+
+              component="img"
+              height="170"
+              image={Product.img}
+            
+              alt="green iguana"
+            />
+
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                {Product.typ}
+              </Typography>
+              <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                {Product.title}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions sx={{ justifyContent: "space-between" }}>
+            <Button sx={{ backgroundColor: "black", color: "white" }} variant='contained'>Shop</Button>
+            <IconButton color='warning'>
+              <StarBorderOutlinedIcon />
+            </IconButton>
+          </CardActions>
+        </Card>
+      ))}
+    </>
   );
 }

@@ -1,34 +1,17 @@
-
+import fetchProducts, { Product } from "../../api";
 import { Grid2 } from "@mui/material"
 import MultiActionAreaCard from "./cards"
 import { Link } from "react-router-dom"
+import { useState, useEffect } from "react";
 export default function Products() {
-    return (
-        <>
-                    <Link to={"/products/paints/vanGogh"}> <MultiActionAreaCard /></Link>
-                    <MultiActionAreaCard />
-                    <MultiActionAreaCard />
-                    <MultiActionAreaCard />
+    const [Products, setProducts] = useState<Product[]>([]);
+    useEffect(() => {
+        fetchProducts().then((Products) => {
+            setProducts(Products);
+console.log(Products)
+        })
+    },[]);
 
-
-
-
-                    <MultiActionAreaCard />
-                    <MultiActionAreaCard />
-                    <MultiActionAreaCard />
-                    <MultiActionAreaCard />
-
-
-
-                    <MultiActionAreaCard />
-                    <MultiActionAreaCard />
-                    <MultiActionAreaCard />
-                    <MultiActionAreaCard />
-
-                    </>
-
-
-                
-
-    )
+    return <MultiActionAreaCard products={Products}/>;
 }
+
