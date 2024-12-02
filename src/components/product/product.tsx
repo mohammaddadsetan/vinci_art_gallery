@@ -1,4 +1,4 @@
-import { Grid2, Paper } from "@mui/material"
+import { Divider, Grid2} from "@mui/material"
 import BasicGrid from "../Grid"
 import BoxBasic from "../Box"
 import DirectionStack from "../Flexcontainer"
@@ -11,13 +11,12 @@ import HomeIcon from '@mui/icons-material/Home';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import GrainIcon from '@mui/icons-material/Grain';
 import Linkedbutton from "../Linkedbutton";
-import michel from '../../img/michelangelodavid4.png';
-import michel2 from '../../img/michelangelodavid.jpg';
-import michel3 from '../../img/michelangelodavid2.jpg';
-import michel4 from '../../img/michelangelodavid3.jpg'
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
-import Paperr from "../paper";
+import Typtext from "../Typography"
+import HalfRating from "../rating"
+import Links from "../Link"
+import AccordionUsage from "../accordion"
 function handleClick(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
   event.preventDefault();
   console.info('You clicked a breadcrumb.');
@@ -62,30 +61,35 @@ export default function Product() {
     <>
       <BasicGrid gridGap={0}>
         <Grid2 size={8} bgcolor={"hsl(0,0%,96%)"} sx={{ padding: "1em" }}>
-          <BoxBasic custom={{ display: "flex", flexDirection: "column", alignItems: "center"}}>
+          <BoxBasic custom={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <DirectionStack gapspace={0} direct={"row"} sx={{ justifyContent: "space-between", alignItems: "center", width: "100%" }}>
               <Linkedbutton variant={"text"} sx={{ color: "rgb(77,77,79)" }} startIcon={<ArrowBackIosNewIcon />}>back</Linkedbutton>
               {IconBreadcrumbs()}
             </DirectionStack>
-            {/* <DirectionStack gapspace={3} sx={{width:"37em"}} direct={"column"}>
-              <Paperr shadow={24} custom={{ height: "25em", borderRadius: "4px", overflow: "hidden" }}>
-                <img className="WH100" src={michel} alt="" />
-              </Paperr>
-              <DirectionStack gapspace={7} sx={{height:"4em"}} direct={"row"}>
-                <Paperr shadow={24} custom={{borderRadius: "4px", overflow: "hidden"}}><img className="WH100" src={michel2} alt="" /></Paperr>
-                <Paperr shadow={24}custom={{borderRadius: "4px", overflow: "hidden"}}><img className="WH100" src={michel3} alt="" /></Paperr>
-                <Paperr shadow={24}custom={{borderRadius: "4px", overflow: "hidden"}}><img className="WH100" src={michel4} alt="" /></Paperr>
-                <Paperr shadow={24}custom={{borderRadius: "4px", overflow: "hidden"}}><img className="WH100" src={michel4} alt="" /></Paperr>
-              </DirectionStack>
-            </DirectionStack> */}
+            <ProductSlider />
 
-            
-              <ProductSlider />
-            
           </BoxBasic>
         </Grid2>
-        <Grid2 size={4}>
-          <BoxBasic></BoxBasic>
+        <Grid2  size={4} padding={"3em"}>
+          <BoxBasic custom={{position:"sticky", top:"0", overflow:"scroll"}}>
+            <DirectionStack gapspace={2.8} direct={"column"} sx={""}>
+              
+              <Typtext variant={"h4"} typ={"h1"} custom={{ fontWeight: "500", lineHeight: "1" }}>Da Vinci</Typtext>
+              <Links underline={"none"}>              <Typtext variant={"subtitle1"} typ={"h1"} custom={{ fontWeight: "300", lineHeight: "1" }}>(painter name)</Typtext>
+              </Links>
+              <Typtext variant={"body1"} typ={"p"}>"These details are clearly and carefully curated by stylists and reviewers. They don't just explain what a dress is made of and how it looks — they cover how it fits on every part of the body, which undergarments should be worn with it, and for which body types it's best suited.</Typtext>
+
+              <Linkedbutton variant={"contained"} sx={{ backgroundColor: "black" }}>SHOP</Linkedbutton>
+              <Typtext variant={"body2"} typ={"p"}>500 views</Typtext>
+              <HalfRating Rate={4.5}/>
+
+
+              <Divider/>
+            </DirectionStack>
+            <AccordionUsage title1={"Details"} title2={"Materials"} title3={"descriptions"} sub1="curated by stylists and reviewers. They don't just explain what a dress is made of and how it looks — they cover how it fits on every part of the body, which undergarments should be" 
+            sub2="curated by stylists and reviewers. They don't just explain what a dress is made of and how it looks — they cover how it fits on every part of the body, which undergarments should be"
+            sub3="curated by stylists and reviewers. They don't just explain what a dress is made of and how it looks — they cover how it fits on every part of the body, which undergarments should be"/>
+          </BoxBasic>
         </Grid2>
       </BasicGrid>
     </>

@@ -4,7 +4,7 @@ import RecipeReviewCard from "./product"
 
 const routes:RouteObject={
 
-    path: '/products/paints/:id',
+    path: '/products/paints/0',
     element: <Layouts />,
         children: [
             {
