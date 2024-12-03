@@ -9,11 +9,13 @@ import CardActions from '@mui/material/CardActions';
 import micheal from '../../img/michelangelodavid4.png';
 import { IconButton } from '@mui/material';
 import StarBorderOutlinedIcon from '@mui/icons-material/StarBorderOutlined';
-import { Product } from '../../api';
+import { ProductTyp } from '../../api';
 import { Link } from 'react-router-dom';
-
+import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
+import SimpleContainer from '../Container';
+import DirectionStack from '../Flexcontainer';
 type productsprop = {
-  products: Product[];
+  products: ProductTyp[];
 }
 
 
@@ -22,36 +24,40 @@ export default function MultiActionAreaCard({ products }: productsprop) {
 
     <>
       {products.map((Product, id) => (
-        <Link to={`/products/${Product.typ}/${id}`}>
-          <Card sx={{ width: 270 }} key={id}>
-            <CardActionArea>
-              <CardMedia
 
-                component="img"
-                height="170"
-                image={Product.img}
+        <Card sx={{ width: 270 }} key={id}>
+          <CardActionArea>
+            <CardMedia
 
-                alt="green iguana"
-              />
+              component="img"
+              height="170"
+              image={Product.img}
 
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="div">
-                  {Product.title}
-                </Typography>
-                <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                  {Product.typ}
-                </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions sx={{ justifyContent: "space-between" }}>
-              <Button sx={{ backgroundColor: "black", color: "white" }} variant='contained'>Shop</Button>
+              alt="green iguana"
+            />
+
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="div">
+                {Product.title}
+              </Typography>
+              <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                {Product.typ}
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+          <CardActions sx={{ justifyContent: "space-between" }}>
+            <Button href={`/products/${Product.typ}/${id}`} size='small' sx={{ backgroundColor: "gray", color: "white" }} variant='contained'>More</Button>
+            <DirectionStack gapspace={1} sx={{width:"1005"}} direct={"row"} >
+              <IconButton color='warning'>
+                <AddShoppingCartIcon />
+              </IconButton>
               <IconButton color='warning'>
                 <StarBorderOutlinedIcon />
-
               </IconButton>
-            </CardActions>
-          </Card>
-        </Link>
+            </DirectionStack>
+          </CardActions>
+        </Card>
+
       ))}
     </>
   );

@@ -1,4 +1,4 @@
-import { Divider, Grid2} from "@mui/material"
+import { Divider, Grid2 } from "@mui/material"
 import BasicGrid from "../Grid"
 import BoxBasic from "../Box"
 import DirectionStack from "../Flexcontainer"
@@ -12,11 +12,12 @@ import WhatshotIcon from '@mui/icons-material/Whatshot';
 import GrainIcon from '@mui/icons-material/Grain';
 import Linkedbutton from "../Linkedbutton";
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
-
+import { fetchProduct } from "../../api"
 import Typtext from "../Typography"
 import HalfRating from "../rating"
 import Links from "../Link"
 import AccordionUsage from "../accordion"
+import { ProductTyp } from "../../api"
 function handleClick(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
   event.preventDefault();
   console.info('You clicked a breadcrumb.');
@@ -56,7 +57,20 @@ const IconBreadcrumbs = () => {
 }
 
 
-export default function Product() {
+type ProductData={
+  productt:ProductTyp
+}
+
+export default function Product({productt}:ProductData) {
+  // React.useEffect(() => {
+  //   fetchProduct(5).then((Product) => {
+  //     console.log(Product)
+  //   })
+
+
+
+  // })
+
   return (
     <>
       <BasicGrid gridGap={0}>
@@ -70,25 +84,24 @@ export default function Product() {
 
           </BoxBasic>
         </Grid2>
-        <Grid2  size={4} padding={"3em"}>
-          <BoxBasic custom={{position:"sticky", top:"0", overflow:"scroll"}}>
+        <Grid2 size={4} padding={"3em"}>
+          <BoxBasic custom={{ position: "sticky", top: "0", overflow: "scroll" }}>
             <DirectionStack gapspace={2.8} direct={"column"} sx={""}>
-              
-              <Typtext variant={"h4"} typ={"h1"} custom={{ fontWeight: "500", lineHeight: "1" }}>Da Vinci</Typtext>
+
+              <Typtext variant={"h4"} typ={"h1"} custom={{ fontWeight: "500", lineHeight: "1" }}>{productt.title}</Typtext>
               <Links underline={"none"}>              <Typtext variant={"subtitle1"} typ={"h1"} custom={{ fontWeight: "300", lineHeight: "1" }}>(painter name)</Typtext>
               </Links>
               <Typtext variant={"body1"} typ={"p"}>"These details are clearly and carefully curated by stylists and reviewers. They don't just explain what a dress is made of and how it looks — they cover how it fits on every part of the body, which undergarments should be worn with it, and for which body types it's best suited.</Typtext>
 
               <Linkedbutton variant={"contained"} sx={{ backgroundColor: "black" }}>SHOP</Linkedbutton>
               <Typtext variant={"body2"} typ={"p"}>500 views</Typtext>
-              <HalfRating Rate={4.5}/>
+              <HalfRating Rate={4.5} />
 
-
-              <Divider/>
+              <Divider />
             </DirectionStack>
-            <AccordionUsage title1={"Details"} title2={"Materials"} title3={"descriptions"} sub1="curated by stylists and reviewers. They don't just explain what a dress is made of and how it looks — they cover how it fits on every part of the body, which undergarments should be" 
-            sub2="curated by stylists and reviewers. They don't just explain what a dress is made of and how it looks — they cover how it fits on every part of the body, which undergarments should be"
-            sub3="curated by stylists and reviewers. They don't just explain what a dress is made of and how it looks — they cover how it fits on every part of the body, which undergarments should be"/>
+            <AccordionUsage title1={"Details"} title2={"Materials"} title3={"descriptions"} sub1="curated by stylists and reviewers. They don't just explain what a dress is made of and how it looks — they cover how it fits on every part of the body, which undergarments should be"
+              sub2="curated by stylists and reviewers. They don't just explain what a dress is made of and how it looks — they cover how it fits on every part of the body, which undergarments should be"
+              sub3="curated by stylists and reviewers. They don't just explain what a dress is made of and how it looks — they cover how it fits on every part of the body, which undergarments should be" />
           </BoxBasic>
         </Grid2>
       </BasicGrid>
