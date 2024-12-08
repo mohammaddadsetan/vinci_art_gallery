@@ -39,10 +39,10 @@ export function fetchProducts(): Promise<ProductTyp[]> {
 }
 
 
-export function fetchProduct( inputId :number): Promise<ProductTyp> {
+export function fetchProduct(categoryInput:string, inputId :number ): Promise<ProductTyp> {
     return new Promise((resolve) => {
         Products.map((product) => {
-            if (inputId==product.id){
+            if (inputId==product.id && categoryInput==product.typ){
                 resolve(product)
             }
         })

@@ -81,7 +81,7 @@ export default function Product({productt}:ProductData) {
               {IconBreadcrumbs()}
             </DirectionStack>
             <ProductSlider />
-
+            
           </BoxBasic>
         </Grid2>
         <Grid2 size={4} padding={"3em"}>

@@ -15,7 +15,7 @@ import { RouteObject } from "react-router-dom";
                         element: <Products />
                     },
                     {
-                        path: '/products/musics',
+                        path: 'musics',
                         element: <Redirect path='/' />
                     },
 
