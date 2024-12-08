@@ -1,17 +1,17 @@
 import  { fetchProducts,ProductTyp } from "../../api";
 import { Grid2 } from "@mui/material"
 import MultiActionAreaCard from "./cards"
-import { Link } from "react-router-dom"
+import { Link, useLoaderData } from "react-router-dom"
 import { useState, useEffect } from "react";
 export default function Products() {
     const [Products, setProducts] = useState<ProductTyp[]>([]);
+    const {productsfilter}=useLoaderData() as {productsfilter:ProductTyp[]}
     useEffect(() => {
-        fetchProducts().then((Products) => {
-            setProducts(Products);
-
-        })
+        setProducts(productsfilter)
+        
     },[]);
+    
 
-    return <MultiActionAreaCard products={Products}/>;
+    return <MultiActionAreaCard products={productsfilter}/>;
 }
 

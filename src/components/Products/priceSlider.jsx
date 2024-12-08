@@ -10,7 +10,7 @@ export default function App() {
     setPriceRangeValue(newValue);
   };
 
-  console.log(priceRangeValue);
+  
 
   function minrange() {
     if (priceRangeValue[0] < 0) {

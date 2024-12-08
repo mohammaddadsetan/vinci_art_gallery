@@ -12,7 +12,7 @@ if(params.category=="paints"){
 else{renderObject=<h1>not found</h1>}
 return(
 <>
-<Header position="none"/>
+
 {renderObject}
 </>
 )

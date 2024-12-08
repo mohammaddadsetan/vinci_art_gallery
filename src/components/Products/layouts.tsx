@@ -11,7 +11,7 @@ import ColorToggleButton from "./sortFIlter"
 export default function Layouts(){
 return(
 <>
-<Header position='none'/>
+
 <BoxBasic typ={"section"} custom={{ padding: "0 2em" }}>
             <BoxBasic custom={{ padding: "3em 0" }}>
                 <BasicGrid gridGap={0}>
