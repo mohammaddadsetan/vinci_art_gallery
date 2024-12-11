@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from "react";
-import img1 from '../..//img/products.jpeg'
-import img2 from '../..//img/products1.jpg'
-import img3 from '../..//img/products2.jpg'
-import img4 from '../..//img/products3.jpg'
 
-const SlideshowBackground = () => {
+
+const SlideshowBackground = ({img1,img2,img3,img4}) => {
   const images = [
    img1,
    img2,
    img3,
    img4
-  ]; // آدرس تصاویر شما
+  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 

@@ -6,11 +6,14 @@ import Typtext from '../Typography'
 import DirectionStack from '../Flexcontainer'
 import Linkedbutton from '../Linkedbutton'
 import SimpleSnackbar from './DarkLightButton'
+import SlideshowBackground from '../Products/ProductsSlider'
 
 export default function Banner() {
     return (
         <BoxBasic typ={"section"} custom={{ position: "relative", height: "100vh" }}>
             <img className='WH100 banner-img' src={bannerpic} alt="" />
+            
+             {/* <SlideshowBackground/> */}
             <SimpleContainer custom={{
                 width: "100%",
                 position: "absolute",

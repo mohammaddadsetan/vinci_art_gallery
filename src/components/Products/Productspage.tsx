@@ -16,12 +16,16 @@ import Linkedbutton from "../Linkedbutton"
 import BasicChips from "./chip"
 import { Margin, Padding } from "@mui/icons-material"
 import SlideshowBackground from "./ProductsSlider"
+import img1 from '../..//img/products.jpg'
+import img2 from '../..//img/products1.jpg'
+import img3 from '../..//img/products2.jpg'
+import img4 from '../..//img/products3.jpg'
 export default function Productsinfo() {
     return (
         <>
             <SimpleContainer custom={{ height: "100vh", position: "relative" }}>
                 {/* <img src={productsimg} className="WH100" style={{ objectFit: "cover", opacity: ".60" }} alt="" /> */}
-                <SlideshowBackground/>
+                <SlideshowBackground img1={img1} img2={img2} img3={img3} img4={img4}/>
                 <BoxBasic
                     custom={{
                         width: "100%",
