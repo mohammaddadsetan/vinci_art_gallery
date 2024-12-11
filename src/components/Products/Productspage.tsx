@@ -5,15 +5,16 @@ import BoxBasic from "../Box"
 import BasicGrid from "../Grid"
 import { Grid2 } from "@mui/material"
 import Typtext from "../Typography"
-
+import { Link } from "react-router-dom"
 import InteractiveList from "./listfilter"
 import ColorToggleButton from "./sortFIlter"
 import SimpleContainer from "../Container"
 import productsimg from '../../img/products.jpeg'
 import Linkedbutton from "../Linkedbutton"
-import ProductsSlider from "./productsSlider"
-import { Opacity, Padding } from "@mui/icons-material"
+// import ProductsSlider from "./productsSlider"
+
 import BasicChips from "./chip"
+import { Margin, Padding } from "@mui/icons-material"
 export default function Productsinfo() {
     return (
         <>
@@ -27,15 +28,25 @@ export default function Productsinfo() {
                         top: "15%",
                         textAlign: "center",
                     }}>
-                    <Typtext custom={{ marginBottom: "2%" }} variant={"h4"}>PRODUCTS</Typtext>
+                    <Typtext custom={{ marginBottom: "1%" }} variant={"h4"}>PRODUCTS</Typtext>
                     <Typtext custom={{ letterSpacing: "30%", wordSpacing: "20px" }} variant={"subtitle1"}>Thank   you   for   supporting   the   art</Typtext>
 
-                    <DirectionStack gapspace={3} direct={"row"} sx={{ padding:"2em",justifyContent:"center"}}>
-                        <BasicChips custom={{width:"10%"}} label="Music"/>
-                        <BasicChips custom={{width:"10%"}} label="Music"/>
-                        <BasicChips custom={{width:"10%"}} label="Music"/>
-                        <BasicChips custom={{width:"10%"}} label="Music"/>
-                        <BasicChips custom={{width:"10%"}} label="Music"/>
+                    <DirectionStack gapspace={5} direct={"row"} sx={{
+                          backgroundColor:"#ffffff85",
+                         justifyContent:"center",
+                           width:"fit-content" ,
+                            margin:"0 auto" ,
+                             padding:"2em 4em",
+                             borderRadius:".5em",
+                             marginTop:"4em"
+                             
+                             }}>
+
+                        <Link to={'musics'}><BasicChips custom={{width:"10em",height:"3em", backgroundColor:"#00000084",color:"white"}} label="Musics"/></Link>
+                        <Link to={'paints'}><BasicChips custom={{width:"10em",height:"3em", backgroundColor:"#00000084",color:"white"}} label="Paints"/></Link>
+                        <Link to={'sculptures'}><BasicChips custom={{width:"10em",height:"3em", backgroundColor:"#00000084",color:"white"}} label="Sculptures"/></Link>
+                        <Link to={'crafts'}><BasicChips custom={{width:"10em",height:"3em", backgroundColor:"#00000084",color:"white"}} label="Crafts"/></Link>
+                        <Link to={'photos'}><BasicChips custom={{width:"10em",height:"3em", backgroundColor:"#00000084",color:"white"}} label="Photos"/></Link>
 
                     </DirectionStack>
 

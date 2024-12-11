@@ -9,6 +9,9 @@ let renderObject=null
 if(params.category=="paints"){
     renderObject=<ProductContainer/>
 }
+else if(params.category=="musics"){
+    renderObject=<ProductContainer/>
+}
 else{renderObject=<h1>not found</h1>}
 return(
 <>

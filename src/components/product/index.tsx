@@ -9,7 +9,6 @@ const routes: RouteObject = {
     errorElement:<h1>product not found</h1>,
     loader: async ({ params }) => {
         const product = await fetchProduct(String(params.category),Number(params.id));
-    
         return { product };
         
     }
