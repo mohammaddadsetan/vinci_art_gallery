@@ -20,12 +20,14 @@ import img1 from '../..//img/products.jpg'
 import img2 from '../..//img/products1.jpg'
 import img3 from '../..//img/products2.jpg'
 import img4 from '../..//img/products3.jpg'
+import ProductCard from "./newcard"
+import { CardOverflow } from "@mui/joy"
 export default function Productsinfo() {
     return (
         <>
             <SimpleContainer custom={{ height: "100vh", position: "relative" }}>
                 {/* <img src={productsimg} className="WH100" style={{ objectFit: "cover", opacity: ".60" }} alt="" /> */}
-                <SlideshowBackground img1={img1} img2={img2} img3={img3} img4={img4}/>
+                <SlideshowBackground img1={img1} img2={img2} img3={img3} img4={img4} />
                 <BoxBasic
                     custom={{
                         width: "100%",
@@ -37,21 +39,21 @@ export default function Productsinfo() {
                     <Typtext custom={{ letterSpacing: "30%", wordSpacing: "20px" }} variant={"subtitle1"}>Thank   you   for   supporting   the   art</Typtext>
 
                     <DirectionStack gapspace={5} direct={"row"} sx={{
-                          backgroundColor:"#ffffff85",
-                         justifyContent:"center",
-                           width:"fit-content" ,
-                            margin:"0 auto" ,
-                             padding:"2em 4em",
-                             borderRadius:".5em",
-                             marginTop:"4em"
-                             
-                             }}>
+                        backgroundColor: "#ffffff85",
+                        justifyContent: "center",
+                        width: "fit-content",
+                        margin: "0 auto",
+                        padding: "2em 4em",
+                        borderRadius: ".5em",
+                        marginTop: "4em"
 
-                        <Link to={'musics'}><BasicChips custom={{width:"10em",height:"3em", backgroundColor:"#00000084",color:"white"}} label="Musics"/></Link>
-                        <Link to={'paints'}><BasicChips custom={{width:"10em",height:"3em", backgroundColor:"#00000084",color:"white"}} label="Paints"/></Link>
-                        <Link to={'sculptures'}><BasicChips custom={{width:"10em",height:"3em", backgroundColor:"#00000084",color:"white"}} label="Sculptures"/></Link>
-                        <Link to={'crafts'}><BasicChips custom={{width:"10em",height:"3em", backgroundColor:"#00000084",color:"white"}} label="Crafts"/></Link>
-                        <Link to={'photos'}><BasicChips custom={{width:"10em",height:"3em", backgroundColor:"#00000084",color:"white"}} label="Photos"/></Link>
+                    }}>
+
+                        <Link to={'musics'}><BasicChips custom={{ width: "10em", height: "3em", backgroundColor: "#00000084", color: "white" }} label="Musics" /></Link>
+                        <Link to={'paints'}><BasicChips custom={{ width: "10em", height: "3em", backgroundColor: "#00000084", color: "white" }} label="Paints" /></Link>
+                        <Link to={'sculptures'}><BasicChips custom={{ width: "10em", height: "3em", backgroundColor: "#00000084", color: "white" }} label="Sculptures" /></Link>
+                        <Link to={'crafts'}><BasicChips custom={{ width: "10em", height: "3em", backgroundColor: "#00000084", color: "white" }} label="Crafts" /></Link>
+                        <Link to={'photos'}><BasicChips custom={{ width: "10em", height: "3em", backgroundColor: "#00000084", color: "white" }} label="Photos" /></Link>
 
                     </DirectionStack>
 
@@ -59,7 +61,26 @@ export default function Productsinfo() {
                 </BoxBasic>
             </SimpleContainer>
 
+            <SimpleContainer custom={{padding:"2em 2em", width:"100%", backgroundColor:"rgb(46,40,39)"}}>
+                <DirectionStack gapspace={0} sx={{alignItems:"center"}} direct={"row"} >
 
+                    <DirectionStack gapspace={0} sx={{width:"40%"}} direct={"row"}>
+                        <Typtext variant={"h2"} custom={{color:"white"}}>
+                            Top Music's Products
+                        </Typtext>
+                    </DirectionStack>
+
+                    <BoxBasic custom={{width:"60%" , overflow:"hidden" , border:"2px double white", borderRight:"none"}}>
+                        <DirectionStack direct={"row"} gapspace={3} sx={{overflow:"scroll" , padding:"1em"}}>
+                            <ProductCard />
+                            <ProductCard />
+                            <ProductCard />
+                            <ProductCard />
+                            <ProductCard />
+                        </DirectionStack>
+                    </BoxBasic>
+                </DirectionStack>
+            </SimpleContainer>
 
 
         </>
