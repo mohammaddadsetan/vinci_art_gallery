@@ -25,7 +25,7 @@ export default function MultiActionAreaCard({ products }: productsprop) {
     <>
       {products.map((Product, id) => (
 
-        <Card sx={{ width: 270 }} key={id}>
+        <Card sx={{ width: 270 , minWidth:"200px" }} key={id}>
           <CardActionArea>
             <CardMedia
 

@@ -64,6 +64,25 @@ export function fetchProducts(categoryInput: string): Promise<ProductTyp[]> {
 };
 
 
+export function fetchTopMusics():Promise<ProductTyp[]>{
+    return new Promise((resolve) => {
+        let topMusics:ProductTyp[]=[];
+        for (let index = 0; index <Products.length; index++) {
+           if (Products[index].typ==="musics"&&topMusics.length<=4) {
+          topMusics.push(Products[index]);
+          
+           }
+        
+        }
+        resolve(topMusics);
+        
+        
+    });
+
+
+}
+
+
 
 
 export function fetchProduct(categoryInput: string, inputId: number): Promise<ProductTyp> {

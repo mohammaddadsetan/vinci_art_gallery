@@ -12,7 +12,7 @@ import SimpleContainer from "../Container"
 import productsimg from '../../img/products.jpeg'
 import Linkedbutton from "../Linkedbutton"
 // import ProductsSlider from "./productsSlider"
-
+import MultiActionAreaCard from "./cards"
 import BasicChips from "./chip"
 import { Margin, Padding } from "@mui/icons-material"
 import SlideshowBackground from "./ProductsSlider"
@@ -22,6 +22,38 @@ import img3 from '../..//img/products2.jpg'
 import img4 from '../..//img/products3.jpg'
 import ProductCard from "./newcard"
 import { CardOverflow } from "@mui/joy"
+import { ProductTyp } from "../../api"
+import { fetchTopMusics } from "../../api"
+import { useEffect, useState } from "react"
+
+const SetTopMusics=()=>{
+const [TopMusics, setTopMusics] = useState<ProductTyp[]>([]);
+// fetchTopMusics();
+
+useEffect(()=>{
+    // const fetchTops= async () =>{
+    //     await fetchTopMusics();
+    // }
+    // console.log(fetchTops)
+fetchTopMusics().then((result)=>{
+setTopMusics(result)
+
+})
+
+},[])
+return(
+
+
+<MultiActionAreaCard products={TopMusics}/>
+
+)
+
+}
+
+
+
+
+
 export default function Productsinfo() {
     return (
         <>
@@ -72,11 +104,7 @@ export default function Productsinfo() {
 
                     <BoxBasic custom={{width:"60%" , overflow:"hidden" , border:"2px double white", borderRight:"none"}}>
                         <DirectionStack direct={"row"} gapspace={3} sx={{overflow:"scroll" , padding:"1em"}}>
-                            <ProductCard />
-                            <ProductCard />
-                            <ProductCard />
-                            <ProductCard />
-                            <ProductCard />
+                           {SetTopMusics()}
                         </DirectionStack>
                     </BoxBasic>
                 </DirectionStack>
