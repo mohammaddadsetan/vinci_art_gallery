@@ -10,23 +10,27 @@ const query = new URLSearchParams({ filter: "LowestPrice" });
 
 
 export default function ColorToggleButton() {
-  const [alignment, setAlignment] = useState("Newest");
+  const [alignment, setAlignment] = useState<any>("Newest");
+  const [changeButton, setChangeButton] = useState<string>();
+  useEffect(() => {
+
+    if (changeButton!=alignment) {
+      setAlignment(changeButton)
+    }
 
 
-  const handleAlignment = (e: any) => {
-   setAlignment(e.target.value)
-    
-  }
+  }, [changeButton])
+
+ 
 
 
-  
   return (
     <ToggleButtonGroup
       color="standard"
       value={alignment}
       exclusive
       size='small'
-      onChange={handleAlignment}
+      onChange={(e: any) => setChangeButton(e.target.value)}
       aria-label="Platform"
       fullWidth
       sx={{ width: "60%", border: "solid black 1px" }}

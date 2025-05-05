@@ -16,6 +16,7 @@ import { fetchProduct } from "../../api"
 import Typtext from "../Typography"
 import HalfRating from "../rating"
 import Links from "../Link"
+
 import AccordionUsage from "../accordion"
 import { ProductTyp } from "../../api"
 function handleClick(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
@@ -23,7 +24,8 @@ function handleClick(event: React.MouseEvent<HTMLDivElement, MouseEvent>) {
   console.info('You clicked a breadcrumb.');
 }
 
-const IconBreadcrumbs = () => {
+const IconBreadcrumbs = (ProName:string) => {
+  
   return (
     <div role="presentation" onClick={handleClick}>
       <Breadcrumbs aria-label="breadcrumb">
@@ -49,7 +51,8 @@ const IconBreadcrumbs = () => {
           sx={{ color: 'text.primary', display: 'flex', alignItems: 'center' }}
         >
           <GrainIcon sx={{ mr: 0.5 }} fontSize="inherit" />
-          Paints
+          {ProName}
+          
         </Typography>
       </Breadcrumbs>
     </div>
@@ -77,8 +80,8 @@ export default function Product({productt}:ProductData) {
         <Grid2 size={8} bgcolor={"hsl(0,0%,96%)"} sx={{ padding: "1em" }}>
           <BoxBasic custom={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
             <DirectionStack gapspace={0} direct={"row"} sx={{ justifyContent: "space-between", alignItems: "center", width: "100%" }}>
-              <Linkedbutton variant={"text"} sx={{ color: "rgb(77,77,79)" }} startIcon={<ArrowBackIosNewIcon />}>back</Linkedbutton>
-              {IconBreadcrumbs()}
+              <Link href={`/products/${productt.typ}`}><Linkedbutton variant={"text"} sx={{ color: "rgb(77,77,79)" }} startIcon={<ArrowBackIosNewIcon />}>back</Linkedbutton></Link>
+              {IconBreadcrumbs(productt.typ)}
             </DirectionStack>
             <ProductSlider />
             

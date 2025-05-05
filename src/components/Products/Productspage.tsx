@@ -13,19 +13,19 @@ import productsimg from '../../img/products.jpeg'
 import Linkedbutton from "../Linkedbutton"
 // import ProductsSlider from "./productsSlider"
 import MultiActionAreaCard from "./cards"
-import BasicChips from "./chip"
+import BasicChips from "../chip"
 import { Margin, Padding } from "@mui/icons-material"
-import SlideshowBackground from "./ProductsSlider"
+// import SlideshowBackground from "./ProductsSlider"
 import img1 from '../..//img/products.jpg'
 import img2 from '../..//img/products1.jpg'
 import img3 from '../..//img/products2.jpg'
 import img4 from '../..//img/products3.jpg'
-import ProductCard from "./newcard"
+// import ProductCard from "./newcard"
 import { CardOverflow } from "@mui/joy"
 import { ProductTyp } from "../../api"
 import { fetchTopMusics } from "../../api"
 import { useEffect, useState } from "react"
-
+import React from "react"
 const SetTopMusics=()=>{
 const [TopMusics, setTopMusics] = useState<ProductTyp[]>([]);
 // fetchTopMusics();
@@ -38,20 +38,22 @@ useEffect(()=>{
 fetchTopMusics().then((result)=>{
 setTopMusics(result)
 
+
 })
 
 },[])
+
+
 return(
 
 
 <MultiActionAreaCard products={TopMusics}/>
-
 )
 
 }
 
 
-
+const SlideshowBackground = React.lazy(() => import("./ProductsSlider"));
 
 
 export default function Productsinfo() {

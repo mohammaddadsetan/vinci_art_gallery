@@ -25,12 +25,12 @@ export default function SimpleSnackbar() {
     };
 
     const [checked, setChecked] = React.useState(true);
-   
 
 
-    React.useEffect(() => {
-       console.log(checked + "useeffect")
-      }, [checked])
+
+    // React.useEffect(() => {
+    //     console.log(checked + "useeffect")
+    // }, [checked])
 
 
     const BlueSwitch = styled(Switch)(({ theme }) => ({
@@ -51,7 +51,7 @@ export default function SimpleSnackbar() {
     const action = (
         <React.Fragment >
             <BlueSwitch checked={checked}
-                onClick={()=>setChecked(!checked)} sx={{ marginRight: ".5em" }} />
+                onClick={() => setChecked(!checked)} sx={{ marginRight: ".5em" }} />
             <IconButton
                 size="small"
                 aria-label="close"

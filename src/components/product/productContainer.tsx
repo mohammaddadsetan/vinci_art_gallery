@@ -6,7 +6,7 @@ import { ProductTyp } from "../../api";
 function ProductContainer() {
   const params = useParams();
   const {product} = useLoaderData() as { product: ProductTyp};
-  console.log(product)
+  // console.log(product)
   return (
     <div>
       <Product productt={product} />

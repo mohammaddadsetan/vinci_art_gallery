@@ -32,13 +32,7 @@ useEffect(() => {
     else { settest(products) }
 
 
-  }, [test])
-
-
-
-
-
-
+  }, [test,products])
 
   return (
 

@@ -5,20 +5,24 @@ import BoxBasic from "../Box"
 import BasicGrid from "../Grid"
 import { Grid2 } from "@mui/material"
 import Typtext from "../Typography"
-
+import { FadeLoader } from "react-spinners";
 import InteractiveList from "./listfilter"
 import ColorToggleButton from "./sortFIlter"
-export default function Layouts(){
-return(
-<>
-<Outlet/>
-</>
+import { Suspense } from "react"
+export default function Layouts() {
+    return (
+        <>
+            <Suspense fallback={<FadeLoader color="red"/>}>
+                <Outlet />
+            </Suspense>
+
+        </>
 
 
 
 
 
-)
+    )
 
 
 
