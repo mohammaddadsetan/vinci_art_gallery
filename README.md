@@ -1,3 +1,10 @@
+# React Art Gallery Project
+
+This is my first React project, which has been refactored using TypeScript.
+
+The project is about an art gallery website that sells artworks created by various artists.  
+Please note that this is an educational project, and not all features of the website are fully implemented yet.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
